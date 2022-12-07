@@ -32,7 +32,6 @@
             </td>
         </tr>
     </table>
-
 <div id="ketQua"></div>
 <script>
     // hàm để nhận sự kiện từ HTML
@@ -43,7 +42,7 @@
         let from = document.getElementById("1").value;
         let to =document.getElementById("2").value;
         if(from=="usd"&&to=="usd"){
-            result = amount + "USD"
+            result = amount + "USD";
         }
         else
         if(from=="usd"&&to=="vnd"){
@@ -51,11 +50,11 @@
         }
         else
             if(from=="vnd"&&to=="usd"){
-                result =amount/23000 +"USD"
+                result =amount/23000 +"USD";
             }
             else
                 result =amount+"VND"
-        document.getElementById("ketQua").innerHTML=result;
+        document.getElementById("ketQua").innerText = result ;
     }
 
 </script>
