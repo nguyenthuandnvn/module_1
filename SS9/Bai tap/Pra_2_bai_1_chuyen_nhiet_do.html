@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>chuyennhietdo</title>
-    <h2>BT Chuyển nhiệt độ C sang F</h2>
-    <input type="number" id="input" placeholder="nhập oC">
-    <button onclick="convert()">chuyen sang oF</button>
-    <div id="result"></div>
-    <script>
-        function convert() {
-
-            let c =+document.getElementById("input").value;
-            let f=
-                document.getElementById("result").innerHTML=(a +" nhở hơn 10");
-
-        }
-
-    </script>
 </head>
 <body>
+<h2>BT Chuyển nhiệt độ C sang F</h2>
+<input type="number" id="input" placeholder="nhập oC">
+<button onclick="convert()">chuyen sang oF</button>
+<div id="result">Hiển thị kết quả</div>
+<script>
+    function convert() {
+
+        let c = +document.getElementById("input").value;
+        let f = c * 9 / 5 + 32
+        document.write("Do F la " + f + "oF");
+    }
+
+</script>
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dttamgiacvuong</title>
+</head>
+<body>
+<h2>BT Tính diện tích hình tam giac vuong</h2>
+<input type="number" id="height" placeholder="nhập cạnh a">
+<input type="number" id="width" placeholder="nhập cạnh b">
+<button onclick="area()">dien tich tam giac vuong</button>
+<div id="result"></div>
+<script>
+    function area() {
+        let h = +document.getElementById("height").value;
+        let cr = +document.getElementById("width").value;
+        if (h < 0 || cr < 0) {
+            document.getElementById("result").innerHTML = "Mời nhập lại cho đúng";
+        } else {
+            let s = h * cr / 2;
+            document.getElementById("result").innerHTML = "Dien tich hinh cn la: " + s + " (don vi dien tich)";
+        }
+    }
+</script>
+</body>
+</html>

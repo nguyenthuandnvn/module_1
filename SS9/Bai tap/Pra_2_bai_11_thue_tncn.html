@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhtncn</title>
+</head>
+<body>
+<h2>BT tính thuế thu nhập cá nhân</h2>
+<input type="number" id="salary" placeholder="Nhập tiền lương">
+<button onclick="tncn()">TNCN</button>
+<div id="result" style="color: green"></div>
+<script>
+    function tncn() {
+
+        let sa = +document.getElementById("salary").value;
+        if (sa < 0) {
+            document.getElementById("result").innerHTML = ("Nhập lại số tiền cho đúng");
+        } else {
+            if (sa >= 0 && sa <= 5000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là" + parseInt(0.05 * sa) + "VND");
+            } else if (sa > 5000000 && sa < 10000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.1 * sa - 250000) + "VND");
+            } else if (sa >= 10000000 && sa < 18000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.15 * sa - 750000) + "VND");
+            } else if (sa >= 18000000 && sa < 32000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.2 * sa - 1650000) + "VND");
+            } else if (sa >= 32000000 && sa < 52000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.25 * sa - 3250000) + "VND");
+            } else if (sa >= 52000000 && sa < 80000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.3 * sa - 5850000) + "VND");
+            } else
+                document.getElementById("result").innerHTML = ("Thuế TNCN là " + parseInt(0.35 * sa - 9850000) + "VND");
+        }
+    }
+
+</script>
+</body>
+</html>

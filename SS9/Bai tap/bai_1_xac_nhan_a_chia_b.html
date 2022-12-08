@@ -6,25 +6,23 @@
 </head>
 <body>
 <h2 style="color: green">BT xác nhận a có chia hết cho b không?</h2>
-<input type="number" style="width: 100px" id="input_a" placeholder="nhập a" >
-<input type="number" style="width: 100px" id="input_b" placeholder="nhập b" >
+<input type="number" style="width: 100px" id="input_a" placeholder="nhập a">
+<input type="number" style="width: 100px" id="input_b" placeholder="nhập b">
 <button onclick="confirm()">Xác nhận a chia b</button>
 <div id="result"></div>
 
- <script>
-     function confirm() {
-         let a = +document.getElementById("input_a").value;
-         let b = +document.getElementById("input_b").value;
-         if (a % b == 0) {
-             document.getElementById("result").innerHTML = "a chia hết cho b";
-             //nếu ko có else chỗ này thì sẽ chạy đồng thời 2 lệnh if trên và dưới
-         } else
-         if (a % b != 0) {
-             document.getElementById("result").innerHTML = "a không chia hết cho b";
-         }
-         else
-             document.getElementById("result").innerHTML = "Mời nhập lại";
-     }
- </script>
+<script>
+    function confirm() {
+        let a = +document.getElementById("input_a").value;
+        let b = +document.getElementById("input_b").value;
+        if (a % b == 0) {
+            document.getElementById("result").innerHTML = "a chia hết cho b";
+            //nếu ko có else chỗ này thì sẽ chạy đồng thời 2 lệnh if trên và dưới
+        } else if (a % b != 0) {
+            document.getElementById("result").innerHTML = "a không chia hết cho b";
+        } else
+            document.getElementById("result").innerHTML = "Mời nhập lại";
+    }
+</script>
 </body>
 </html>

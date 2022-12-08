@@ -12,15 +12,13 @@
 <script>
     function compare() {
 
-    let a =+document.getElementById("input").value;
-    if (a>10){
-        document.getElementById("result").innerHTML=(a+" lớn hơn 10");
-    }
-    else if(a==10){
-        document.getElementById("result").innerHTML=(a+ "=10");
-    }
-    else
-        document.getElementById("result").innerHTML=(a +" nhở hơn 10");
+        let a = +document.getElementById("input").value;
+        if (a > 10) {
+            document.getElementById("result").innerHTML = (a + " lớn hơn 10");
+        } else if (a == 10) {
+            document.getElementById("result").innerHTML = (a + "=10");
+        } else
+            document.getElementById("result").innerHTML = (a + " nhở hơn 10");
 
     }
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dientichchunhat</title>
+</head>
+<body>
+<h2>BT Tính diện tích hình cn</h2>
+<input type="number" id="long" placeholder="nhập chiều dài">
+<input type="number" id="width" placeholder="nhập chiều rong">
+<button onclick="area()">dien tich cn</button>
+<div id="result"></div>
+<script>
+    function area() {
+        let cd = +document.getElementById("long").value;
+        let cr = +document.getElementById("width").value;
+        if (cd < 0 || cr < 0) {
+            document.getElementById("result").innerHTML = "Mời nhập lại cho đúng";
+        } else {
+            let s = cd * cr;
+            document.getElementById("result").innerHTML = "Dien tich hinh cn la: " + s + " (don vi dien tich)";
+        }
+    }
+</script>
+</body>
+</html>

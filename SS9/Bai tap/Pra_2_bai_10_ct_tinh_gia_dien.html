@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhgiadien</title>
+</head>
+<body>
+<h2>BT tính giá điện tiêu thụ</h2>
+<input type="number" id="input" placeholder="Nhập Kw điện">
+<button onclick="electricity()">Tính giá điện</button>
+<div id="result" style="color: green"></div>
+<script>
+    function electricity() {
+
+        let kh = +document.getElementById("input").value;
+        if (kh < 0) {
+            document.getElementById("result").innerHTML = ("Nhập lại cho đúng số dương");
+        } else {
+            if (kh >= 0 && kh <= 50) {
+                document.getElementById("result").innerHTML = ("Giá điện là " + 1678 * kh + "VND");
+            } else if (kh > 50 && kh < 100) {
+                document.getElementById("result").innerHTML = ("Giá điện là " + 1734 * kh + "VND");
+            } else if (kh >= 100 && kh < 200) {
+                document.getElementById("result").innerHTML = ("Giá điện là " + 2014 * kh + "VND");
+            } else
+                document.getElementById("result").innerHTML = ("Giá điện là " + 2536 * kh + "VND");
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -6,27 +6,26 @@
 </head>
 <body>
 <h2>BT Tính hoa hồng dựa trên doanh thu</h2>
+
 <input type="number" id="input" placeholder="Nhập doanh thu">
 <button onclick="bonus()">xác nhận hoa hồng</button>
 <div id="result" style="color: green"></div>
+
 <script>
+
     function bonus() {
 
-        let a =+document.getElementById("input").value;
-        if (a<30000000){
-            document.getElementById("result").innerHTML=("Mức hoa hồng là 0VND");
-        }
-        else if(a>=30000000&&a<60000000){
-            document.getElementById("result").innerHTML=("Mức hoa hồng là "+0.03*a+"VND").fixed(0);
-        }
-        else if(a>=60000000&&a<120000000){
-            document.getElementById("result").innerHTML=("Mức hoa hồng là "+0.06*a+"VND").fixed(0);
-        }
-        else if(a>=120000000&&a<200000000) {
-            document.getElementById("result").innerHTML=("Mức hoa hồng là "+0.09*a+"VND").fixed(0);
-        }
-        else
-            document.getElementById("result").innerHTML=("Mức hoa hồng là "+0.1*a+"VND").fixed(0);
+        let a = +document.getElementById("input").value;
+        if (a < 30000000) {
+            document.getElementById("result").innerHTML = "Mức hoa hồng là 0VND";
+        } else if (a >= 30000000 && a < 60000000) {
+            document.getElementById("result").innerHTML = "Mức hoa hồng là " + parseInt(0.03 * a) + "VND";
+        } else if (a >= 60000000 && a < 120000000) {
+            document.getElementById("result").innerHTML = "Mức hoa hồng là " + parseInt(0.06 * a) + "VND";
+        } else if (a >= 120000000 && a < 200000000) {
+            document.getElementById("result").innerHTML = "Mức hoa hồng là " + parseInt(0.09 * a) + "VND";
+        } else
+            document.getElementById("result").innerHTML = "Mức hoa hồng là " + parseInt(0.1 * a) + "VND";
     }
 
 </script>

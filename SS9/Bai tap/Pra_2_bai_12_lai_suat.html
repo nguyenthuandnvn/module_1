@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhlaisuat</title>
+</head>
+<body>
+<h2>BT tính lãi suất tiết kiệm</h2>
+<input type="number" id="money" placeholder="Nhập tiền gửi">
+<button onclick="rate()">lai suat</button>
+<div id="result1" style="color: green"></div>
+<br/>
+<div id="result2" style="color: green"></div>
+<br/>
+<div id="result3" style="color: green"></div>
+<br/>
+<div id="result4" style="color: green"></div>
+<br/>
+<div id="result5" style="color: green"></div>
+<br/>
+<script>
+    function rate() {
+
+        let m = +document.getElementById("money").value;
+        if (m < 0) {
+            document.getElementById("result1").innerHTML = "Nhập lại số tiền cho đúng";
+        } else {
+            let t1 = m * 0.01;
+            let t2 = (m + t1) * 0.01;
+            let t3 = (m + t2) * 0.01;
+            let t4 = (m + t3) * 0.01;
+            let t5 = (m + t4) * 0.01;
+            document.getElementById("result1").innerHTML = "Lãi suất tháng thứ 1: " + parseInt(t1);
+            document.getElementById("result2").innerHTML = "Lãi suất tháng thứ 2: " + parseInt(t2);
+            document.getElementById("result3").innerHTML = "Lãi suất tháng thứ 3: " + parseInt(t3);
+            document.getElementById("result4").innerHTML = "Lãi suất tháng thứ 4: " + parseInt(t4);
+            document.getElementById("result5").innerHTML = "Lãi suất tháng thứ 5: " + parseInt(t5);
+        }
+    }
+
+</script>
+</body>
+</html>

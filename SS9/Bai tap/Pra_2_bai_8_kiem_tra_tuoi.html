@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiemtratuoi</title>
+</head>
+<body>
+<body>
+<h2>BT Kiểm tra tuổi 1 người</h2>
+<input type="number" id="age" placeholder="nhập tuổi">
+<button onclick="confirm()">Kiem tra</button>
+<div id="result" style="color: orangered"></div>
+<script>
+    function confirm() {
+        let t = +document.getElementById("age").value;
+        if (t % Math.floor(t) != 0) {
+            document.getElementById("result").innerHTML = "Mời nhập lại tuổi theo số nguyên";
+        } else {
+            if (t > 0 && t < 120) {
+                document.getElementById("result").innerHTML = "day la tuoi cua 1 nguoi";
+            } else {
+                document.getElementById("result").innerHTML = "day ko phai la tuoi 1 nguoi";
+            }
+        }
+    }
+</script>
+</body>
+
+</body>
+</html>

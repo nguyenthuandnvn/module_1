@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyendonvi</title>
+</head>
+<body>
+<h2>BT Chuyển đơn vị m sang feet</h2>
+<input type="number" id="input" placeholder="nhập don vi m">
+<button onclick="convert()">chuyen sang feet</button>
+<div id="result">Hiển thị kết quả</div>
+<script>
+    function convert() {
+
+        let m = +document.getElementById("input").value;
+        let feet = m * 3.28
+        document.write(feet);
+    }
+
+</script>
+</body>
+</html>

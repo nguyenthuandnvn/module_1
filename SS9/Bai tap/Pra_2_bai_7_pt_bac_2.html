@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ptbac2</title>
+</head>
+<body>
+<h2>BT Nghiệm phương trình bậc 2</h2>
+<input type="number" id="a1" placeholder="nhập a">
+<input type="number" id="b1" placeholder="nhập b">
+<input type="number" id="c1" placeholder="nhập c">
+
+<button onclick="aquation()">nghiem pt</button>
+<div id="result"></div>
+<br/>
+<div id="result1"></div>
+<script>
+    function aquation() {
+        let a = +document.getElementById("a1").value;
+        let b = +document.getElementById("b1").value;
+        let c = +document.getElementById("c1").value;
+        let delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.getElementById("result").innerHTML = "phuong trinh vo nghiem ";
+        } else if (delta == 0) {
+            document.getElementById("result").innerHTML = "phuong trinh co 1 nghiem kep x1=x2= " + -b / 2 * a;
+        } else {
+            let x1 = -b - (Math.sqrt(delta)) / (2 * a);
+            let x2 = -b + (Math.sqrt(delta)) / (2 * a);
+            document.getElementById("result").innerHTML = "nghiem x1 la: " + x1.toFixed(2);
+            document.getElementById("result1").innerHTML = "nghiem x2 la: " + x2.toFixed(2);
+        }
+    }
+</script>
+</body>
+</html>
