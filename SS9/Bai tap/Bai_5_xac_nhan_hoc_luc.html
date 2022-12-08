@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xacnhanhocluc</title>
+</head>
+<body>
+<h2 style="color: green">BT xác nhận học lực học sinh</h2>
+<input type="number" style="width: 150px" id="input_a" placeholder="điểm ktra" >
+<input type="number" style="width: 150px" id="input_b" placeholder="điểm giữa kỳ" >
+<input type="number" style="width: 150px" id="input_c" placeholder="điểm cuối kỳ" >
+<button onclick="ability_confirm()">Max value</button>
+<div id="result" style="color: orange" ></div>
+
+<script>
+    function ability_confirm() {
+        let a = +document.getElementById("input_a").value;
+        let b = +document.getElementById("input_b").value;
+        let c = +document.getElementById("input_c").value;
+        if (a < 0 || a > 10 || b < 0 || b > 10 || c < 0 || c > 10) {
+            document.getElementById("result").innerHTML = "Mời nhập lại điểm số cho đúng"
+        }
+        else {
+        let DTK = (a + 2 * b + 3 * c) / 6
+        if (DTK >= 8) {
+            document.getElementById("result").innerHTML = "Xếp loại giỏi";
+        } else if (DTK >= 7 && DTK < 8) {
+            document.getElementById("result").innerHTML = "Xếp loại khá";
+        } else if (DTK >= 5 && DTK < 7) {
+            document.getElementById("result").innerHTML = "Xếp loại TB";
+        } else {
+            document.getElementById("result").innerHTML = "Xếp loại Yếu";
+        }
+        }
+    }
+</script>
+
+</body>
+</html>

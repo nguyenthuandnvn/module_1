@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giatrilonnhat</title>
+</head>
+<body>
+<h2 style="color: green">BT xác nhận giá trị lớn nhất</h2>
+<input type="number" style="width: 100px" id="input_a" placeholder="nhập a" >
+<input type="number" style="width: 100px" id="input_b" placeholder="nhập b" >
+<input type="number" style="width: 100px" id="input_c" placeholder="nhập c" >
+<button onclick="max_confirm()">Max value</button>
+<div id="result" style="color: orange" ></div>
+
+<script>
+    function max_confirm() {
+        let a = +document.getElementById("input_a").value;
+        let b = +document.getElementById("input_b").value;
+        let c = +document.getElementById("input_c").value;
+
+        if (a>=b&&a>=c) {
+            document.getElementById("result").innerHTML = "Max value is"+a;
+        } else
+        if (b>=a&&b>=c) {
+            document.getElementById("result").innerHTML = "Max value is"+b;
+        }
+        else
+            document.getElementById("result").innerHTML = "Max value is"+c;
+    }
+</script>
+</body>
+</html>
