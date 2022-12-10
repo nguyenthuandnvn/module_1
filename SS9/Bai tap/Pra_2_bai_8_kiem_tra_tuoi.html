@@ -12,11 +12,11 @@
 <div id="result" style="color: orangered"></div>
 <script>
     function confirm() {
-        let t = +document.getElementById("age").value;
-        if (t % Math.floor(t) != 0) {
+        let tuoi = +document.getElementById("age").value;
+        if (tuoi % Math.floor(tuoi) != 0) {
             document.getElementById("result").innerHTML = "Mời nhập lại tuổi theo số nguyên";
         } else {
-            if (t > 0 && t < 120) {
+            if (tuoi > 0 && tuoi < 120) {
                 document.getElementById("result").innerHTML = "day la tuoi cua 1 nguoi";
             } else {
                 document.getElementById("result").innerHTML = "day ko phai la tuoi 1 nguoi";
