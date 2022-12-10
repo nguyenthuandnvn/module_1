@@ -21,15 +21,15 @@
 <script>
     function rate() {
 
-        let m = +document.getElementById("money").value;
-        if (m < 0) {
+        let soTien = +document.getElementById("money").value;
+        if (soTien < 0) {
             document.getElementById("result1").innerHTML = "Nhập lại số tiền cho đúng";
         } else {
-            let t1 = m * 0.01;
-            let t2 = (m + t1) * 0.01;
-            let t3 = (m + t2) * 0.01;
-            let t4 = (m + t3) * 0.01;
-            let t5 = (m + t4) * 0.01;
+            let t1 = soTien * 0.1;
+            let t2 = (soTien + t1) * 0.1;
+            let t3 = (soTien + t2) * 0.1;
+            let t4 = (soTien + t3) * 0.1;
+            let t5 = (soTien + t4) * 0.1;
             document.getElementById("result1").innerHTML = "Lãi suất tháng thứ 1: " + parseInt(t1);
             document.getElementById("result2").innerHTML = "Lãi suất tháng thứ 2: " + parseInt(t2);
             document.getElementById("result3").innerHTML = "Lãi suất tháng thứ 3: " + parseInt(t3);

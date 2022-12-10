@@ -12,12 +12,12 @@
 <div id="result"></div>
 <script>
     function area() {
-        let cd = +document.getElementById("long").value;
-        let cr = +document.getElementById("width").value;
-        if (cd < 0 || cr < 0) {
+        let cDai = +document.getElementById("long").value;
+        let cRong = +document.getElementById("width").value;
+        if (cDai < 0 || cRong < 0) {
             document.getElementById("result").innerHTML = "Mời nhập lại cho đúng";
         } else {
-            let s = cd * cr;
+            let s = cDai * cRong;
             document.getElementById("result").innerHTML = "Dien tich hinh cn la: " + s + " (don vi dien tich)";
         }
     }

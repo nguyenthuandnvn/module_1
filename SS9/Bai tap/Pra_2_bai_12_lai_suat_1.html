@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhlaisuat</title>
+</head>
+<body>
+<h2>BT tính lãi suất tiết kiệm</h2>
+<input type="number" id="money" placeholder="Nhập tiền gửi">
+<input type="number" id="month" placeholder="Nhập tháng gửi">
+<button onclick="rate()">lai suat</button>
+<div id="result" style="color: green"></div>
+<br/>
+<script>
+    function rate() {
+
+        let soTien = +document.getElementById("money").value;
+        let thang = +document.getElementById("month").value;
+        if ( soTien< 0 || thang < 0) {
+            document.getElementById("result").innerHTML = "Nhập lại số tiền cho đúng";
+        } else {
+            let lSuat;
+            let i;
+            for (i = 1; i <= thang; i++) {
+                lSuat = soTien * 0.1;
+                document.write("thang " + i + "la: " + lSuat + "<br>");
+                soTien += lSuat;
+            }
+            document.getElementById("result").innerHTML = lSuat + " " + m;
+        }
+    }
+</script>
+</body>
+</html>

@@ -14,8 +14,12 @@
     function area() {
 
         let a = +document.getElementById("input").value;
-        let s = a * 4;
-        document.getElementById("result").innerHTML = "Dien tich hinh vuong la: " + s + " (don vi dien tich)";
+        if (a < 0) {
+            document.getElementById("result").innerHTML=("Mời nhập lại cho đúng");
+        } else {
+            let s = a * a;
+            document.getElementById("result").innerHTML = "Dien tich hinh vuong la: " + s + " (don vi dien tich)";
+        }
     }
 </script>
 </body>
