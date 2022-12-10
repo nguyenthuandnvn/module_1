@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bảng cửu chương</h2>
+<input type="number" placeholder="nhập  số kiểm tra" id="so" style="width: 300px">
+<button onclick="prime()">xác nhận số nguyên tố</button>
+<div id="result"></div>
+<script>
+    function prime() {
+        let n = +document.getElementById("so").value;
+        let count = 0;
+        if (n <= 2) {
+            document.getElementById("result").innerHTML = n + " ko phải là số nguyên tố";
+        } else {
+            for (i = 2; i < Math.sqrt(n); i++) {
+            }
+            if (n % i === 0) {
+
+                document.getElementById("result").innerHTML = n + " ko phải là so nguyen to";
+            } else {
+                document.getElementById("result").innerHTML = n + "là số nt";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

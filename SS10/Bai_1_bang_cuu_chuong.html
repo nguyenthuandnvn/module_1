@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bảng cửu chương</h2>
+<button onclick="bangcuuchuong()" >click bang cuu chuong</button>
+<script>
+    function bangcuuchuong() {
+        let i;
+        let j;
+        let multi="";
+        multi +="<table border='1'>";
+        for (i=1; i<=9; i++){
+            multi +="<tr>";
+            for(j=2; j<=10; j++){
+                multi += "<td>"+j+" x"+i+" ="+i*j +"</td>";
+            }
+            multi +="</tr>";
+        }
+        multi+="</table>";
+    document.write(multi);
+    }
+</script>
+
+</body>
+</html>
