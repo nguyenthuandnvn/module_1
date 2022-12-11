@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temp = +prompt(" nhập nhiệt số nhiệt độ cơ thể");
+    for (let i = 1; i < 100; i++) {
+        if (temp > 100) {
+            document.write(" nhiệt độ cao" + temp + "<br>" + " Yêu cầu giảm nhiệt độ");
+        } else
+            document.write(" Nhiệt độ bình thường");
+        if (temp < 20) {
+            document.write(" nhiệt độ thấp" + temp + "<br>" + "yêu cầu giảm nhiệt độ");
+        } else {
+            document.write(" nhiệt độ bình thường");
+        }
+    }
+</script>
+</body>
+</html>

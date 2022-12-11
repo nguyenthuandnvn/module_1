@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daysofibonacci</title>
+</head>
+<body>
+<input type="number" placeholder="nhập số cần hiển thị" id="sofibo">
+<button onclick="confirm()">hiển thị</button>
+<div id="result"></div>
+<script>
+    function confirm() {
+        let n1 = 0;
+        let n2 = 1;
+        let nextNumber = 0;
+        let fibonacci = 0;
+        let fn = +document.getElementById("sofibo").value;
+        for (let i = 0; i <= fn; i++) {
+            nextNumber = n1 + n2;
+            n1 = n2;
+            n2 = nextNumber;
+            fibonacci += nextNumber + "<br>";
+        }
+        document.getElementById("result").innerHTML = fibonacci;
+    }
+</script>
+</body>
+</html>

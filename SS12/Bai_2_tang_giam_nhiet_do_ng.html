@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem1den100</title>
+</head>
+<body>
+<input type="number" placeholder="nhập nhiệt độ" id="nhietdo">
+<button onclick="confirm1()">Tăng</button>
+<button onclick="confirm2()">Giảm</button>
+<div id="result"></div>
+<script>
+        let temp= +document.getElementById("nhietdo").value;
+
+    if (temp<20){
+        document.getElementById("result").innerHTML="hãy tăng nhiệt độ"
+        function confirm1 () {
+            temp++;
+        }
+        }
+    else
+        if (temp>30){
+            document.getElementById("result").innerHTML="hãy giảm nhiệt độ"
+            function confirm1 () {
+                temp--;
+            }
+    }
+</script>
+</body>
+</html>

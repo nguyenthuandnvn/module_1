@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem1den100</title>
+</head>
+<body>
+<input type="number" placeholder="nhập số cần đếm" id="sodem">
+<button onclick="confirm()">đếm số</button>
+<div id="result"></div>
+<div id="result1"></div>
+<script>
+    function confirm() {
+        let count = "";
+        let n = +document.getElementById("sodem").value;
+        let memory =0;
+        for (let i = 1; i <= n; i++) {
+            count += "The number is " + i + "<br>";
+            memory++;
+        }
+        if (memory >= 100) {
+            document.getElementById("result1").innerHTML = "da hoan thanh";
+        } else {
+            document.getElementById("result").innerHTML = count;
+        }
+    }
+</script>
+</body>
+</html>
