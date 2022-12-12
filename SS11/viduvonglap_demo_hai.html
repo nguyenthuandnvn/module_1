@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>vidu</title>
+    <title>Nhiệt độ</title>
 </head>
 <body>
 <script>
-    let count = 0;
-    let number = 0;
-    while (count < 2) {
-        let height = prompt("Nhập vào chiều cao")
-        if (height >= 1.65) {
-            count++;
+    let nhietDo= +prompt('Nhập nhiệt độ ');
+    for (let i=0; i<=100; i++){
+        if (nhietDo>100){
+            alert('Giảm nhiệt độ ');
+        } else if (20<=nhietDo && nhietDo<=100){
+            alert('Nhiệt độ bình thường ');
+        } else {
+            alert('Tăng nhiệt độ ');
         }
-        number++;
+        break;
     }
-    document.write(count+ "<br>");
-    document.write(number);
 </script>
 </body>
 </html>

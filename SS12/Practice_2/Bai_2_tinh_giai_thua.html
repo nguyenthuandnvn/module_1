@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhgiaithua</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="nhập giai thừa n">
+<button onclick="confirm()">click giai thua</button>
+<div id="result"></div>
+<script>
+    function confirm() {
+        let factorial = 1
+        let n = +document.getElementById("number").value;
+        for (let i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+            document.getElementById("result").innerHTML = factorial + "<br>";
+    }
+</script>
+</body>
+</html>

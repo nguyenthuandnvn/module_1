@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hcn</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập cạnh:");
+    for (let j = 1; j <= n; j++) {
+        for (let i = 1; i <= j; i++) {
+                document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+    for (let j = 1; j <= n; j++) {
+        for (let i = n; i >= j; i--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    for (let j = 1; j <= n; j++) {
+        for (let i = n; i >= j; i--) {
+            document.write("&nbsp&nbsp");
+        }
+        for(let i=1; i<=j; i++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+    for (let j = 1; j <= n; j++) {
+        for (let i = 1; i <= j; i++) {
+            document.write("&nbsp&nbsp");
+        }
+        for(let i=n; i>=j; i--){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+
+</script>
+</body>
+</html>

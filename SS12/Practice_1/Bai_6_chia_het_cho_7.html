@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia het cho 7</title>
+</head>
+<body>
+<button onclick="confirm()">30 so dau chia het cho 7</button>
+<div id="result"></div>
+<script>
+    function confirm() {
+        let count = 0;
+        for (let i = 0; i < 30; i++) {
+        count += i*7 + "<br>";
+        }
+        document.getElementById("result").innerHTML = count;
+    }
+</script>
+</body>
+</html>
