@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dichanhviet</title>
+</head>
+<body>
+<p>các từ cần dịch là: apple, banana, orange, lemon</p>
+<input type="text" id="input" placeholder="Nhập từ cần dịch">
+<button onclick="confirm()">Dịch</button>
+<div id="result"></div>
+<script>
+    function confirm() {
+        let vocabulary = document.getElementById("input").value;
+        let english = ["apple", "banana", "orange", "lemon"];
+        let vNamse = ["táo", "chuối", "cam", "chanh"];
+        let i = 0;
+        for (i = 0; i < english.length; i++) {
+            if (english[i] === vocabulary) {
+                document.getElementById("result").innerHTML = vNamse[i];
+                break;
+            } else {
+                document.getElementById("result").innerHTML = "Mời nhập lại 4 từ trong phạm vi trên";
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

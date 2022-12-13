@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sudunghamcosan</title>
+</head>
+<body>
+<button onclick="confirm1()"> click nối chuỗi</button>
+<p></p>
+<button onclick="confirm2()"> click chèn số</button>
+<p></p>
+<button onclick="confirm3()"> click chuyển hoa thường</button>
+<script>
+    function confirm1() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        alert(myColor.join());
+    }
+
+    function confirm2() {
+        let num = prompt("moi nhap so:");
+        let str = num.toString();
+        let result = [str[0]];
+        for (let x = 1; x < str.length; x++) {
+            if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        alert(result.join(''));
+    }
+
+    function confirm3() {
+        var str = prompt("moi nhap chuoi:");
+        var UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var LOWER = "abcdefghijklmnopqrstuvwxyz";
+        var result = [];
+        for (var x = 0; x < str.length; x++) {
+            if (UPPER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toLowerCase());
+            } else if (LOWER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toUpperCase());
+            } else {
+                result.push(str[x]);
+            }
+        }
+        alert(result.join(""));
+    }
+
+</script>
+
+
+</body>
+</html>

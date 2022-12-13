@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khoitaophantu</title>
+</head>
+<body>
+<script>
+    let x = 1;
+    let count = 0;
+    let elements = new Array();
+    for (x = 1; x <= 5; x++) {
+        elements[x] = +prompt("moi nhap so nguyen thu " + x);
+        alert("ten" + elements[x] + "da duoc them vao phan tu " + x);
+        if (elements[x] > 10) {
+            count++
+        }
+    }
+    alert("co" + count + "so nguyen lon hon 10");
+
+</script>
+</body>
+</html>

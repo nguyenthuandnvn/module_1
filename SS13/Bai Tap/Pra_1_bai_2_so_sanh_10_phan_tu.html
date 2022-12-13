@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khoitaophantu</title>
+</head>
+<body>
+<script>
+    let x = 1;
+    let elements = new Array();
+    let max = elements[1];
+    let maxi = 0;
+    for (x = 1; x <= 5; x++) {
+        elements[x] = +prompt("moi nhap so nguyen thu " + x);
+        alert("ten" + elements[x] + "da duoc them vao phan tu " + x);
+        if (max < elements[x]) {
+            max = elements[x];
+            maxi = x;
+        }
+    }
+    alert("giá trị lớn nhất là: " + max +"và vị trí là "+x);
+</script>
+</body>
+</html>
