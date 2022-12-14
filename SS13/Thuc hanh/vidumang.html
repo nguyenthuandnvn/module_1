@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>vidu</title>
+    <title>Title</title>
 </head>
 <body>
-<input type="button" placeholder="hãy bấm">
-<br/>
-<button type="submit">xac nhan</button
-<br/>
-<p></p>
-
-<hr/>
-
-<input type="button" id="abc" value="confirm"/>
-
-
-
+<div id="bai_2"></div>
+<script>
+    let arr = [];
+    let dem = 1;
+    let max;
+    for (let i = 1; i <= 10; i++) {
+        arr[i] = +prompt('nhập số phần tử i: ');
+        if (i === 1) {
+            max = +arr[1];
+        } else if (+arr[i] > max) {
+            max = +arr[i];
+            dem = i;
+        }
+    }
+    document.getElementById('bai_2').innerHTML = 'Số lớn nhất là: ' + max + '<br>' + ' Nằm ở vị trí ' + dem;
+</script>
 </body>
 </html>

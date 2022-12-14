@@ -6,19 +6,21 @@
 </head>
 <body>
 <script>
-    let x = 1;
     let elements = new Array();
-    let max = elements[1];
-    let maxi = 0;
-    for (x = 1; x <= 5; x++) {
-        elements[x] = +prompt("moi nhap so nguyen thu " + x);
-        alert("ten" + elements[x] + "da duoc them vao phan tu " + x);
-        if (max < elements[x]) {
-            max = elements[x];
-            maxi = x;
+    let max = +elements[1];
+    let index = 1;
+    for (let i = 1; i <= 5; i++) {
+        elements[i] = +prompt("moi nhap so nguyen thu " + i);
+        if (elements[i] > max) {
+            max = elements[i];
+            index = i;
+    }
+        else{
+            max = +elements[1];
         }
     }
-    alert("giá trị lớn nhất là: " + max +"và vị trí là "+x);
+    // alert("giá trị lớn nhất là: " + max + "và vị trí là " + index);
+    alert(max.indexOf(index))
 </script>
 </body>
 </html>

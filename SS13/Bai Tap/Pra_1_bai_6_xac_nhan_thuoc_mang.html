@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khoitaophantu</title>
+</head>
+<body>
+<script>
+    let elements = new Array();
+    let anyNumber;
+    let count = 0;
+    for (let i = 1; i <= 5; i++) {
+        elements[i] = +prompt("moi nhap so nguyen thu " + i);
+        alert("số " + elements[i] + " đã được thêm vào phần tử " + i);
+    }
+    anyNumber = +prompt("hãy nhập số bất kỳ: ");
+    for (let i = 1; i <= 5; i++) {
+        if (anyNumber == elements[i]) {
+            count++;
+        }
+    }
+    if (count > 0) {
+        alert(anyNumber + " is in the array");
+    } else {
+        alert(anyNumber + " is not in the array");
+    }
+
+</script>
+</body>
+</html>
