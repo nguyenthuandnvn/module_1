@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thaythekytu</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập số phần tử cần tạo");
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        arr[i] = prompt("Nhập phần tử thứ " + i);
+        if (arr[i] === "-") {
+            arr[i]="*";
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daonguocphantu</title>
+</head>
+<body>
+<script>
+    let elements = new Array();
+    for (let i = 1; i <= 5; i++) {
+        elements[i] = prompt("mời nhập phần tử bất kỳ thứ " + i);
+    }
+    elements.sort(function () {
+        return -1;
+    });
+    alert("mảng đảo ngược là " + elements);
+
+</script>
+</body>
+</html>

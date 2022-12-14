@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>démotutrongchuoi</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào các chuỗi ký tự');
+    let count = 0;
+    let arr = str.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] / 1 != 0) {
+            count++;
+        }
+    }
+    document.write("Chuỗi vừa nhập là: " + str + "<br>" + "Và có " + count + " từ");
+</script>
+</body>
+</html>
