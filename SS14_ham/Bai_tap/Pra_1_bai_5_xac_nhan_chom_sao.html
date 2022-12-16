@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timngoisao</title>
+</head>
+<body>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let temp = prompt("mời nhập tên chòm sao:");
+    alert (findTheStar(temp));
+
+    function findTheStar(star) {
+        for (let i = 0; i < star1.length; i++) {
+            if (star1[i] === star) {
+                return star2[i];
+            }
+        }
+        return "không tìm thấy chòm sao";
+
+    }
+
+
+</script>
+
+</body>
+</html>
