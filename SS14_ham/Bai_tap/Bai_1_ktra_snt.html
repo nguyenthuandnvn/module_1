@@ -16,18 +16,18 @@
     }
 
     function checkPrime(anyNumber) {
-        let ktra = true;
+        let flag = true;
         if (anyNumber < 2) {
-            ktra = false;
+            flag = false;
         } else {
             for (let i = 2; i <= Math.sqrt(anyNumber); i++) {
                 if (anyNumber % i == 0) {
-                    ktra = false;
+                    flag = false;
                     break;
                 }
             }
         }
-        return ktra;
+        return flag;
     }
 
 </script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem1den100</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so nguyen bat ky: ");
+    let a = 0;
+    for (let i = 1; i < n; i++) {
+        if (n % i == 0) {
+            a += i;
+        }
+    }
+    if (a == n) {
+        alert(n + " la so nguyen hoan hao");
+    } else {
+        alert(n + " ko phai la so nguyen hoan hao");
+    }
+</script>
+</body>
+</html>

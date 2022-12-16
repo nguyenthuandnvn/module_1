@@ -6,10 +6,10 @@
 </head>
 <body>
 <script>
-    let number = +prompt("nhap 1 so bat ky");
-    alert("giá trị đối số là " + createArgument(number));
+    alert("giá trị đối số là " + createArgument());
 
-    function createArgument(argument) {
+    function createArgument() {
+        let argument = +prompt("nhap 1 so bat ky");
         argument++;
         return argument;
     }

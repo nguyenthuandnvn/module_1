@@ -6,11 +6,12 @@
 </head>
 <body>
 <script>
-    let x = +prompt("nhập tham số thứ 1:");
-    let y = +prompt("nhập tham số thứ 2:");
-    alert(compare(x, y));
 
-    function compare(a, b) {
+    alert(compare());
+
+    function compare() {
+        let a = +prompt("nhập tham số thứ 1:");
+        let b = +prompt("nhập tham số thứ 2:");
         if (a < b) {
             return "so thu 2 lon hon";
 
