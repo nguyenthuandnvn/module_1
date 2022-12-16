@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daomangsonguyen</title>
+</head>
+<body>
+<script>
+
+    alert(reverseInteger());
+
+    function reverseInteger() {
+        let n = +prompt("mảng số cần nhập: ");
+        let int = [];
+        for (let i = 1; i <= n; i++) {
+            int[i] = +prompt("nhap so nguyen thu " + i);
+        }
+        return "mảng số nguyên đảo ngược là: " + int.reverse();
+    }
+</script>
+
+</body>
+</html>

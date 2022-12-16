@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhgiaithua</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số n: ");
+    alert(calculateFactorial(n));
+
+    function calculateFactorial(a) {
+        let result = 1;
+        for (let i = 1; i <= a; i++) {
+            result *= i;
+        }
+        return "giai thừa của " + n + " là " + result;
+    }
+</script>
+
+</body>
+</html>
