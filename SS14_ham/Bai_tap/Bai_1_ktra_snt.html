@@ -11,20 +11,18 @@
 
     if (checkPrime(anyNumber)) {
         alert(anyNumber + " là số nguyên tố");
-    }
-    else  {
+    } else {
         alert(anyNumber + " ko là số nguyên tố");
     }
 
     function checkPrime(anyNumber) {
         let ktra = true;
-        if(anyNumber<2){
-            ktra= false;
-        }
-        else{
-            for(let i=2; i<=Math.sqrt(anyNumber);i++){
-                if(anyNumber%i==0){
-                    ktra=false;
+        if (anyNumber < 2) {
+            ktra = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(anyNumber); i++) {
+                if (anyNumber % i == 0) {
+                    ktra = false;
                     break;
                 }
             }
