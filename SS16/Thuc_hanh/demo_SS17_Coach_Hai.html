@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>faf</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //PascalCase
+    class Employee {
+        constructor(a, dateOfBirth, address, position, salary) {
+            this.nameEmployee = a;
+            this.dateOfBirth = dateOfBirth;
+            this.address = address;
+            this.position = position;
+            this.salary = salary;
+        }
+
+        work() {
+            //Muốn lấy thuộc tính mà chúng ta đang ở class thì dùng từ khóa this.
+            alert(this.nameEmployee + " Đi làm với vị trí: "+ this.position);
+        }
+    }
+    let employeeOfCodeGym = [];
+    let haiTT = new Employee("HaiTT", "12/12/1222","Quảng Nam", "Trainer","xxxxxxxx");
+    let trungDP = new Employee("TrungDP", "12/12/1222","Đà Nẵng", "CAH","xxxxxxxx");
+
+    employeeOfCodeGym.push(haiTT);
+    employeeOfCodeGym.push(trungDP);
+    haiTT.work();
+    trungDP.work();
+</script>
+</body>
+</html>
+</body>
+</html>

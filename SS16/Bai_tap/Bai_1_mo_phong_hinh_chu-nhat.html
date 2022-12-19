@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinhchunhat</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<!--thuộc tính Width và height là chỉ diện tích thẻ canvas chiếm.-->
+<!--nếu 2 thông số này nhỏ hơn diện tich hcn dưới thì chỉ hiện được tối đa trong khoảng độ rộng này-->
+<script>
+    let canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext('2d');
+    ctx.fillStyle = "#FFCA54";
+    ctx.fillRect(50, 50, 200, 100);
+    //    Phương thức fillRect() sử dụng để vẽ một hình chữ nhật đc tô màu. Mặc định màu đc tô là black
+    //    Thuộc tính fillStyle dùng để thiết lập màu, dải màu hoặc mẫu họa tiết sử dụng để tô hình.
+</script>
+
+</body>
+</html>

@@ -18,7 +18,7 @@
     function checkPrime(anyNumber) {
         let flag = true;
         if (anyNumber < 2) {
-            flag = false;
+            flag = true;
         } else {
             for (let i = 2; i <= Math.sqrt(anyNumber); i++) {
                 if (anyNumber % i == 0) {

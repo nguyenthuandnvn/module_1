@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinhchunhat</title>
+</head>
+<body>
+<script>
+    class SimulateTemperature {
+        celsius;
+        constructor(celsius) {
+            //Phương thức constructor() được gọi tự động khi một lớp được bắt đầu
+            this.celsius = celsius;
+        //    this được dùng để đại diện cho một object.
+        }
+
+        fahrenheit() {
+            return 9 / 5 * this.celsius + 32;
+        }
+
+        kelvins() {
+            return this.celsius + 273;
+        }
+    }
+
+    let temperature = new SimulateTemperature(25);
+    let myFahrenheit = temperature.fahrenheit();
+    let myKelvins = temperature.kelvins();
+    document.write("Nhiet do K: " + myKelvins + "<br>" + "Nhiet do F: " + myFahrenheit);
+
+
+</script>
+
+</body>
+</html>

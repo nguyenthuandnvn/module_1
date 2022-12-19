@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiennsonguyento</title>
+</head>
+<body>
+<script>
+    let n = +prompt("số nguyên tố cần lấy: ");
+    let ar = [];
+    for (let i = 3; i <= 100; i++) {
+        let count = 0;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j == 0) {
+                count++;
+                break;
+            }
+        }
+        if (count == 0) {
+            ar.push(i);
+        }
+    }
+    //Cách 1: dùng hàm plice
+    alert(ar.splice(0,n));
+
+    //Cách 2: dùng vòng lặp
+    // let snt = 0;
+    // for (let x = 0; x < n; x++) {
+    //     snt += ar[x] + "<br>";
+    // }
+    // document.write(snt);
+</script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>hiennsonguyento</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+<!--    let i =0;-->
+<!--    let num =0;-->
+<!--    let primeNumbers = "";-->
+<!--    for (i = 1; i <= 100; i++)-->
+<!--    {-->
+<!--        let counter=0;-->
+<!--        for(num =i; num>=1; num&#45;&#45;)-->
+<!--        {-->
+<!--            if(i%num==0)-->
+<!--            {-->
+<!--                counter = counter + 1;-->
+<!--            }-->
+<!--        }-->
+<!--        if (counter ==2)-->
+<!--        {-->
+<!--            primeNumbers = primeNumbers + i + " ";-->
+<!--        }-->
+<!--    }-->
+<!--    document.write(primeNumbers)-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

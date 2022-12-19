@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem1den100</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap so nguyen a: ");
+    let b = +prompt("nhap so nguyen b: ");
+    let n = [];
+    let m = [];
+    let ucln;
+    for (let i = 1; i <= a; i++) {
+        if (a % i == 0) {
+            n.push(i);
+        }
+    }
+    for (let j = 1; j <= b; j++) {
+        if (b % j == 0) {
+            m.push(j);
+        }
+    }
+    //cach 1: dùng biến flag
+    let flag = false;
+    for (let x = n.length-1; x >= 0; x--) {
+        for (let y = m.length-1; y >= 0; y--) {
+            if (n[x] == m[y]) {
+                ucln = m[y];
+                flag=true;
+                break;
+            }
+        }
+        if(flag){
+            break;
+        }
+    }
+    alert("UCLN của 2 số nguyên là: " + ucln);
+
+  // Cách 2: dùng nhãn
+    LOOPOUT: for (let x = n.length-1; x >= 0; x--) {
+        for (let y = m.length-1; y >= 0; y--) {
+            if (n[x] == m[y]) {
+                ucln = m[y];
+                break LOOPOUT;
+            }
+        }
+    }
+    alert("UCLN của 2 số nguyên là: " + ucln);
+
+</script>
+</body>
+</html>
