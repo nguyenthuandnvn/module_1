@@ -5,14 +5,48 @@
     <title>hinhchunhat</title>
 </head>
 <body>
+<div id="rectangle"></div>
 <canvas id="myCanvas" width="300" height="200"></canvas>
 <!--thuộc tính Width và height là chỉ diện tích thẻ canvas chiếm.-->
 <!--nếu 2 thông số này nhỏ hơn diện tich hcn dưới thì chỉ hiện được tối đa trong khoảng độ rộng này-->
 <script>
+    class Rectangle {
+        constructor(long, width) {
+            this.long = long;
+            this.width = width;
+        }
+
+        getLong() {
+            return this.long;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setLong(long) {
+            this.long = long;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        are() {
+            return this.long * this.width;
+        }
+    }
+
+    let myRectangle = new Rectangle(200, 100);
+    myRectangle.setLong(200);
+    myRectangle.setWidth(100);
+    let long = myRectangle.getLong();
+    let width = myRectangle.getWidth();
+    document.getElementById("rectangle").innerHTML = "Diện tích hcn là " + myRectangle.are();
     let canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext('2d');
     ctx.fillStyle = "#FFCA54";
-    ctx.fillRect(50, 50, 200, 100);
+    ctx.fillRect(50, 50, long, width);
     //    Phương thức fillRect() sử dụng để vẽ một hình chữ nhật đc tô màu. Mặc định màu đc tô là black
     //    Thuộc tính fillStyle dùng để thiết lập màu, dải màu hoặc mẫu họa tiết sử dụng để tô hình.
 </script>
