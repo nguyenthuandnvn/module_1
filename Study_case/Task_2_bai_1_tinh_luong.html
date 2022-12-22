@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhluongnhanvien</title>
+</head>
+<body>
+<h2>Thuế thu nhập cá nhân và lương thực lĩnh</h2>
+<input type="number" id="luong" placeholder="Nhập tiền lương">
+<button onclick="actualSalary()">Thuế TNCN và lương thực lĩnh</button>
+<div id="result" style="color: green"></div>
+<br/>
+
+<script>
+    function actualSalary() {
+        let salary = +document.getElementById("luong").value;
+        if (salary < 0) {
+            document.getElementById("result").innerHTML = ("Nhập lại số tiền cho đúng");
+        } else {
+            if (salary >= 0 && salary < 7000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN: " + parseInt(0.05 * salary)
+                    + "<br>" + "Lương thực lĩnh: " + parseInt(salary - 0.05 * salary));
+            } else if (salary >= 7000000 && salary < 15000000) {
+                document.getElementById("result").innerHTML = ("Thuế TNCN: " + parseInt(0.1 * salary) + "<br>" +
+                    "Lương thực lĩnh: " + parseInt(salary - 0.1 * salary));
+            } else {
+                document.getElementById("result").innerHTML = ("Thuế TNCN: " + parseInt(0.2 * salary) + "<br>" +
+                    "Lương thực lĩnh: " + parseInt(salary - 0.2 * salary));
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

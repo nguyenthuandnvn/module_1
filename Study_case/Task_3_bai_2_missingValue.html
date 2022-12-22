@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>missingValue</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so phan tu mnang 1 can tao");
+    let arr1 = [];
+    let arr2 = [];
+    let arr3 = [];
+    let missingArr = [];
+    for (let i = 0; i < n; i++) {
+        arr1[i] = +prompt("nhap so nguyen thu " + (i + 1));
+    }
+    let m = +prompt("nhap so phan tu mang 2 can tao");
+    for (let j = 0; j < m; j++) {
+        arr2[j] = +prompt("nhap so nguyen thu " + (j + 1));
+    }
+    for (let x = 0; x < arr1.length; x++) {
+        for (let y = 0; y < arr2.length; y++) {
+            if (arr1[x] == arr2[y]) {
+                arr3.push(arr1[x]);
+            }
+        }
+    }
+    // alert(arr3);
+    for (let k = 0; k < arr1.length; k++) {
+        for (let l = 0; l < arr3.length; l++) {
+            if (arr1[k] == arr3[l]) {
+                arr1.splice(k, 1);
+            }
+        }
+    }
+    // alert(arr1);
+    for (let k = 0; k < arr2.length; k++) {
+        for (let l = 0; l < arr3.length; l++) {
+            if (arr2[k] == arr3[l]) {
+                arr2.splice(k, 2);
+            }
+        }
+    }
+    // alert(arr3);
+    // alert(arr2);
+    missingArr = arr1.concat(arr2);
+    alert(missingArr);
+
+</script>
+
+
+</body>
+</html>

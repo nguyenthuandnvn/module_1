@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>missingValue</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhap so phan tu mnang 1 can tao");
+    let arr1 = [];
+    let arr2 = [];
+    let arr3 = [];
+    let arr4 = [];
+    let missingArr = [];
+    for (let i = 0; i < n; i++) {
+        arr1[i] = +prompt("nhap so nguyen thu " + (i + 1));
+    }
+    let m = +prompt("nhap so phan tu mang 2 can tao");
+    for (let j = 0; j < m; j++) {
+        arr2[j] = +prompt("nhap so nguyen thu " + (j + 1));
+    }
+    for (let x = 0; x < arr1.length; x++) {
+        let flag = true;
+        for (let y = 0; y < arr2.length; y++) {
+            if (arr1[x] == arr2[y]) {
+                flag = false;
+            }
+
+        }
+        if (flag == true) {
+            arr3.push(arr1[x]);
+        }
+    }
+    for (let x = 0; x < arr2.length; x++) {
+        let flag = true;
+        for (let y = 0; y < arr1.length; y++) {
+            if (arr2[x] == arr1[y]) {
+                flag = false;
+            }
+
+        }
+        if (flag == true) {
+            arr4.push(arr2[x]);
+        }
+    }
+    missingArr = arr3.concat(arr4);
+    // alert(arr3);
+    // alert(arr4);
+    alert("phần tử khác nhau giữa 2 mảng là: " + missingArr);
+
+
+</script>
+
+
+</body>
+</html>

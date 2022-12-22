@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cs</title>
+</head>
+<body>
+<script>
+    let arg1=[1, 2, 2, 1,1]
+    let arg=[]
+    let check;
+    for(let i=0; i<arg1.length; i++){
+        let count =0;
+        for (let j=0; j<arg1.length; j++){
+            if(arg1[i]==arg1[j]){
+                count++;
+                // arg1.splice(i,count)
+            //Xóa ở vị trí j
+            }
+
+        }
+        arg.push(count);
+    }
+
+
+    alert(arg)
+    for (let x=0; x<arg.length; x++){
+        for (let y=arg.length; y>=0; y--){
+            if(arg[x]==arg[y]&&x!=y){
+                check = "true";
+            }
+            else{
+                check ="false";
+            }
+        }
+    }
+    alert(check);
+
+
+</script>
+
+</body>
+</html>

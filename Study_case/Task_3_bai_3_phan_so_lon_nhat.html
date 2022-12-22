@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>missingValue</title>
+</head>
+<body>
+<script>
+    let n = +prompt("so phan tu khoi tao: ");
+    let numerators = [];
+    let denominators = [];
+    let max = 0;
+    let index;
+    for (let i = 0; i < n; i++) {
+        numerators[i] = +prompt("nhap tu so thu " + (i + 1));
+        denominators[i] = +prompt("nhap mau so thu " + (i + 1));
+        if (max < numerators[i] / denominators[i]) {
+            max = numerators[i] / denominators[i];
+            index = i;
+        }
+    }
+
+    alert("phân số lớn nhất là: " + max + " va chi so la: " + index);
+    // alert(index)
+
+
+</script>
+
+
+</body>
+</html>

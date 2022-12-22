@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+</head>
+<body>
+
+<script>
+    let menu = ["cafe", " Cam vắt", "carot", "ca chua", "nc loc", "nuoc dua"];
+    let price = [2000, 3000, 4000, 5000, 6000, 7000, 8000];
+    let n;
+    let quantity;
+    let flag = true;
+    do {
+        alert("1. cafe; 2. Cam vắt; 3. carot; 4. ca chua; 5. nc loc; 6. nuoc dua; 7. thoat ");
+        n = +prompt("moi chon ma so do uong");
+        if (n === 7) {
+            flag = false;
+            break;
+        }
+        alert(menu[n] + " : " + price[n]);
+        quantity = +prompt("nhập số lượng đồ uống:");
+        alert("tổng tiền là: " + price[n] * +quantity + " VND");
+
+    }
+    while (flag);
+    // } while (n < (menu.length + 1));
+    alert("cám ơn bạn đã chọn đồ uống");
+
+
+</script>
+</body>
+</html>
