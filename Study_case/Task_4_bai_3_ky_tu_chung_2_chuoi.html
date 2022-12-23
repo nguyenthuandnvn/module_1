@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kytu</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("nhap vao chuoi 1 cac ky tu");
+    let str2 = prompt("nhap vao chuoi 2 cac ky tu");
+    let arr1 = str1.split("");
+    let arr2 = str2.split("");
+    let commonArr = [];
+    alert(arr1);
+    alert(arr2);
+    for (let i = 0; i < arr1.length; i++) {
+        let flag = false;
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                flag = true;
+                break;
+            }
+        }
+        if (flag) {
+            commonArr.push(arr1[i]);
+        }
+    }
+    // cách 2
+    // for(let i=0; i<arr1.length; i++){
+    //     let flag =true;
+    //     for(let j=0; j<arr2.length;j++){
+    //         if(arr1[i]!==arr2[j]){
+    //             flag =false;
+    //         }
+    //         else{flag=true; break;}
+    //     }
+    //     if(flag){
+    //         commonArr.push(arr1[i])
+    //     }
+    // }
+    alert("ký tự chung là: " + commonArr);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>snt</title>
+</head>
+<body>
+<script>
+    let flag = true;
+    let n=+prompt(nhap)
+
+    for (let x = 2; x < Math.sqrt(n); x++) {
+        if(matrix[i][j]==1){
+            flag=false
+            break;
+        }
+        else if(matrix[i][j]==2||matrix[i][j]==3){
+            flag=true;
+            break;
+        }
+        else if(matrix[i][j] % x == 0) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag){
+        count++;
+</script>
+</body>
+</html>

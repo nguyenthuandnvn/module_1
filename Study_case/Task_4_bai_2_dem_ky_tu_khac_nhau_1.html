@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kytu</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhap vao chuoi cac ky tu");
+    let arr = str.split("");
+    alert(arr);
+    let arr1 = [];
+    for (let i = 0; i < arr.length; i++) {
+        let flag = true;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            arr1.push(arr[i]);
+        }
+    }
+    // alert(count);
+    // alert(arr.length);
+    alert("số ký tự khác nhau là: " + arr1.length);
+
+</script>
+</body>
+</html>

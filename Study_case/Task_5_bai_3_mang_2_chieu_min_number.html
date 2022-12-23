@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>mang2chieuminnumber</title>
+</head>
+<body>
+<script>
+    let m = +prompt("nhap so dong:");
+    let n = +prompt("nhap so cot:");
+    let min;
+    let max;
+    let matrix = new Array(m);
+    for (let i = 0; i < m; i++) {
+        let arr = [];
+
+        for (let j = 0; j < n; j++) {
+            arr[j] = +prompt("nhap vao phan tu vao matrix[" + i + "]" + "[" + j + "]");
+        }
+        matrix[i] = arr;
+    }
+
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (i == 0 && j == 0) {
+                min = matrix[0][0];
+            } else if (matrix[i][j] < min) {
+                min = matrix[i][j];
+            }
+        }
+    }
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (i == 0 && j == 0) {
+                max = matrix[0][0];
+            } else if (matrix[i][j] > max) {
+                max = matrix[i][j];
+            }
+        }
+    }
+    alert("min number is: " + min + "  *max la: " + max);
+
+</script>
+</body>
+</html>

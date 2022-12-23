@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// function solution(arg1) {
+    let arg1=[1,2,1,2];
+let arg=[]
+for(let i=0; i<arg1.length; i++) {
+    let count = 1;
+    for (let j = i + 1; j < arg1.length; j++) {
+        if (arg1[i] === arg1[j]) {
+            count++;
+            arg1.splice(j, 1);
+            j--;
+
+        }
+    }
+}
+arg.push(count);
+alert(arg)
+// }
+// for (let x=0; x<arg.length; x++){
+// let flag=true;
+// for (let y=1; y<arg.length; y++){
+// if(arg[x]!==arg[y]){
+// flag=false;
+// return false;
+// }
+// }return true;
+// }
+// }
+</script>
+
+</body>
+</html>
