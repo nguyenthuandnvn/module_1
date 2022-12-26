@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuoikytu</title>
+</head>
+<body>
+<script>
+    let anyString = prompt("Nhập chuỗi lỗi bất kỳ");
+    alert(getCharacter(anyString));
+
+    function getCharacter(badString) {
+        let newString = badString.toLowerCase();
+        let newString1 = newString.split(" ");
+        //hàm split: phân tách chuỗi thành mảng
+        alert(newString1);
+        let newString2 = [];
+        let newString3 = [];
+        let newString4 = [];
+        let newString5 = [];
+        for (let i = 0; i < newString1.length; i++) {
+            if (newString1[i] !== "") {
+                newString2.push(newString1[i]);
+            }
+        }
+        alert(newString2);
+        for (let i = 0; i < newString2.length; i++) {
+            newString3[i] = newString2[i].charAt(0).toUpperCase();
+            newString4[i] = newString2[i].slice(1);
+            newString5[i] = newString3[i] + newString4[i];
+        }
+        // alert(newString3)
+        // alert(newString4)
+        // alert(newString5)
+        let newString6 = [];
+        for (let i = 0; i < newString5.length; i++) {
+            newString6[i] = newString5[i].length;
+        }
+        // alert(newString6)
+        let max = newString6[0];
+        for (let i = 1; i < newString6.length; i++) {
+            if (newString6[i] > max) {
+                max = newString6[i];
+            }
+        }
+        let indexMax = newString6.indexOf(max);
+        return "Chuổi sau xử lý: " + newString5.join(" ") + " ,từ dài nhất là: " + newString5[indexMax];
+    }
+
+</script>
+</body>
+</html>

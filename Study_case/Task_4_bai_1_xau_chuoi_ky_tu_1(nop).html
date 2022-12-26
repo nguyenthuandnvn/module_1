@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuoikytu</title>
+</head>
+
+<body>
+<input type="text" placeholder="nhập chuỗi bất kỳ" id="check" style="width: 500px">
+<button onclick="convert()"> check và chỉnh sửa</button>
+<br/>
+<div id="result"></div>
+<script>
+
+    function convert() {
+        let anyString = document.getElementById("check").value;
+        let arr1 = anyString.toLowerCase().split(" ");
+        let arr2 = [];
+        let arr3 = [];
+        let arr4 = [];
+        let arr5 = [];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== "") {
+                arr2.push(arr1[i]);
+            }
+        }
+        for (let i = 0; i < arr2.length; i++) {
+            arr3[i] = arr2[i].charAt(0).toUpperCase();
+            arr4[i] = arr2[i].slice(1);
+            arr5[i] = arr3[i] + arr4[i];
+        }
+        document.getElementById("result").innerHTML = arr5.join(" ");
+    }
+
+
+</script>
+
+</body>
+</html>
